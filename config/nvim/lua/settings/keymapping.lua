@@ -25,6 +25,11 @@ map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })
 map("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true })
 
 -- ======================================================================================
+-- Cycle through open buffers using Alt-right and Alt-left 
+map("n", "<A-Right>", ":bnext<cr>", {})
+map("n", "<A-Left>", ":bprevious<cr>", {})
+
+-- ======================================================================================
 -- Line Break using Ctrl-return
 map("i", "<C-cr>", " <br /><cr>", {})
 
@@ -48,6 +53,5 @@ map("n", "<leader>r", ":%s///g<Left><Left><Left>", { desc = "Search & replace" }
 
 -- ======================================================================================
 -- Zenmode
-map("n", "<leader>z", ":ZenMode<cr>", { desc = "ZenMode" })
-map("i", "<leader>z", ":ZenMode<cr>", { desc = "ZenMode" })
+map({"n","i"}, "<leader>z", ":ZenMode<cr>", { desc = "ZenMode" })
 

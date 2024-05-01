@@ -28,10 +28,6 @@ alias jserve="bundle exec jekyll serve --livereload"
 # Lock Screen
 alias lock='~/bin/lock.sh'
 
-# Obsidian
-# Start Obsidian and sync journal entries
-alias ob='~/bin/obsidian.sh'
-
 # New journal entry
 alias nn='~/bin/write/new-daily-note.sh'
 
