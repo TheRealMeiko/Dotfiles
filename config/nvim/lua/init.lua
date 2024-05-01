@@ -1,0 +1,6 @@
+require ('configuration.options')
+require ('configuration.packages')
+require ('configuration.colourscheme')
+require ('configuration.services')
+require ('configuration.keymapping')
+require ('configuration.autocommands')

@@ -1,0 +1,63 @@
+# Help with available options
+# https://docs.helix-editor.com/configuration.html
+
+# Marksman releases
+# https://github.com/artempyanykh/marksman/releases
+
+# Themes
+# https://github-wiki-see.page/m/helix-editor/helix/wiki/Themes
+#theme = "onedark"
+theme = "onelight"
+
+[editor]
+bufferline = "always"
+color-modes = true
+cursorline = true
+line-number = "relative" # absolute is default
+rulers = [80]
+text-width = 200
+true-color = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.indent-guides]
+character = "╎"
+render = true
+
+[editor.file-picker]
+hidden = false
+
+[editor.lsp]
+auto-signature-help = false
+display-messages = true
+
+[editor.soft-wrap]
+enable = true
+max-indent-retain = 0
+max-wrap = 25
+wrap-at-text-width = true
+wrap-indicator = ""  # use "" to hide indicator
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "position", "file-encoding", "file-type"]
+
+[keys.normal]
+# Key mapping in normal mode
+"ins" = "insert_mode"
+"del" = "delete_selection"
+"C-home" = "goto_file_start" # Ctrl-home = go to top of file
+"C-end" = "goto_last_line" # Ctrl-end = go to end of file
+
+[keys.normal."\\"]
+# My custom bindings
+# Tapping '\' will bring up my list of custom actions
+"c" = ":config-open"
+"i" = ":insert-output ~/.config/helix/snippets/snippet-single-image"
+"m" = ":insert-output ~/.config/helix/snippets/snippet-multi-images"
+"r" = ":reload" # Reload current file and discard changes
+"t" = ":insert-output ~/.config/helix/snippets/snippet-table"

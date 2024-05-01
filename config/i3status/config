@@ -1,0 +1,82 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+    colors = true
+    color_good = "#00ff00"      # green
+    color_degraded = "#ffa500"  # orange
+    color_bad = "#ff0000"       # red
+    separator = "#ffffff"
+    interval = 1
+}
+
+#order += "ipv6"
+#order += "wireless _first_"
+order += "ethernet _first_"
+#order += "battery all"
+order += "disk /"
+order += "disk /home"
+order += "cpu_usage"
+order += "load"
+order += "memory"
+order += "volume master"
+order += "tztime local"
+
+wireless _first_ {
+    format_up = " W: (%quality at %essid) %ip "
+    format_down = " W: down "
+}
+
+ethernet _first_ {
+    format_up = " E: %ip (%speed) "
+    format_down = " E: DOWN "
+}
+
+vpn_status {
+    path = "/home/paul/bin/vpnstatus.sh"
+    format = "VPN: %vpnstatus" 
+}
+
+
+battery all {
+    format = "%status %percentage %remaining"
+}
+
+disk "/" {
+    format = " Free Space: %avail "
+}
+
+disk "/home" {
+    format = " %avail "
+}
+
+cpu_usage {
+    format = " CPU: %usage "
+}
+
+load {
+    format = " Load: %5min 5min "
+}
+
+memory {
+    format = " Memory Used: %used "
+    threshold_degraded = "1G"
+    format_degraded = "Memory < %available"
+}
+
+volume master {
+    format = " Volume: %volume "
+    format_muted = " %volume "
+    device = "default"
+    mixer = "Master"
+    mixer_idx = 0
+}
+
+tztime local {
+    format = " %A %d %B %Y %H:%M:%S "
+}

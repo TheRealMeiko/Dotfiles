@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+html {
+    font-size: 11pt;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+header {
+    margin-bottom: 2.5rem;
+}
+
+h1, h2, h3, h4 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+
+p, a, ul, ol, li, em, code, th, tr, td {
+    font-family: serif;
+}
+
+table {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border-collapse: collapse;
+}
+
+th, tr, td {
+    font-size: 10pt;
+    border: solid #f2f2f2 1px;
+    padding: 0.5rem;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+td {
+    white-space: nowrap;
+}
+
+.sender {
+    font-family: sans-serif;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+}
+
+.contact-details {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.subject {
+    font-weight:bold;
+}
+
+.signature {
+    margin-top: 6rem;
+}
+
+@media print {
+  html {
+    font-size: 11pt;
+  }
+
+  body {
+    max-width: 100%;
+    background-color: #fff;
+  }
+
+  aside, form, video {
+    display: none;
+  }
+
+  header {
+    page-break-after: avoid;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #000000;
+    page-break-after: avoid;
+  }
+
+  h1 {
+    string-set: title content();
+  }
+
+  p, em, ul, ol, li, th, tr, td {
+    color: #000000;
+  }
+  
+  p {
+    /* Try to have at least the final three lines carry across to the next page*/
+    widows: 3;
+  }
+  a {
+    page-break-inside: avoid;
+  }
+
+  a::after {
+    content: " ";
+  }
+
+  ul, ol, li, dl {
+    page-break-before: avoid;
+  }
+
+  table {
+    page-break-inside: avoid;
+  }
+
+  blockquote {
+    page-break-inside: avoid;
+  }
+
+  footer {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+@page {
+  margin: 20mm;
+  size: A4;
+  counter-increment: page;
+  @top-right {
+    content: "Page " counter(page) " of " counter(pages);
+    font-size: 10pt;
+    color: #888888;
+    vertical-align: middle;
+  }
+  @top-center {
+    content: "";
+  }
+  @top-left {
+    content: string(title);
+    font-size: 10pt;
+    color: #888888;
+    vertical-align: middle;
+    width: 100%;
+  }
+  @bottom-right {
+    content: "Paul Dürnberger";
+    font-size: 10pt;
+    color: #888888;
+    width: 100%;
+    vertical-align: middle;
+  }
+  @bottom-center {
+    background: #fff;
+    content: "";
+    display: block;
+    height: 0.1mm;
+    width: 100%;
+    opacity: 0.6;
+  }
+  @bottom-left {
+    content: "";
+    font-size: 10pt;
+    color: #888888;
+    text-transform: uppercase;
+    width: 100%;
+    vertical-align: middle;
+  }
+}
+@page :first {
+  @top-left {
+    background: none;
+    content: "";
+  }
+  @top-center {
+    content: none;
+  }
+  @top-right {
+    content: none;
+  }
+}
+@page :blank {
+  @top-left {
+    background: none;
+    content: "";
+  }
+  @top-center {
+    content: none;
+  }
+  @top-right {
+    content: none;
+  }
+}

@@ -1,0 +1,280 @@
+html {
+	font-size: 12pt;
+}
+
+body {
+	font-family:Georgia, 'Times New Roman', serif;
+	color: #333333;
+	max-width: 100%;
+	background-color: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family:'Lucida Sans', Verdana, sans-serif;
+	text-transform: uppercase;
+}
+
+p {
+	line-height: 1.667;
+}
+
+.author {
+	text-transform: uppercase;
+}
+
+.title {
+	font-family:'Lucida Sans', Verdana, sans-serif;
+    font-size: 3.00rem;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 0.5rem;
+}
+
+.subtitle {
+	color: #b46200
+		/*orange*/
+	;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 0.30rem;
+}
+
+.cover {
+	padding-top: 45%;
+}
+
+.signature {
+	text-transform: uppercase;
+}
+
+a {
+	text-decoration: none;
+}
+
+table {
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+	border-collapse: collapse;
+}
+
+th,
+tr,
+td {
+	font-size: 11pt;
+	border: solid #f2f2f2 1px;
+	padding: 0.5rem;
+}
+
+th {
+	color: #ffffff;
+	background-color: #b46200;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+img {
+	width: 100%;
+}
+
+.row {
+	width: 100%;
+	align-items: flex-end;
+	/*Ensures each element aligned to bottom of row*/
+	display: flex;
+}
+
+.col {
+	flex: 1;
+	padding: 0.25rem;
+}
+
+figure {
+	width: 100%;
+	margin: 0 auto;
+}
+
+figure.centered {
+	width: 75%;
+}
+
+figcaption {
+	font-size: 11pt;
+	font-style: italic;
+	text-align: center;
+	padding-top: 0.25rem;
+	padding-bottom: 0.75rem;
+}
+
+blockquote {
+	width: 100%;
+	margin-top: 1.5rem;
+	margin-bottom: 2.0rem;
+	margin-left: 0;
+	padding-left: 1rem;
+	border-left: solid 0.1rem #b46200
+		/*orange*/
+	;
+}
+
+blockquote p {
+	font-style: italic;
+	color: #555555;
+	text-align: justify;
+}
+
+cite {
+	font-size: 11pt;
+	font-style: italic;
+}
+
+footer {
+	margin-top: 3rem;
+	padding-top: 2rem;
+	margin-bottom: 2rem;
+	padding-bottom: 2rem;
+}
+
+footer p {
+	font-size: 10pt;
+	text-align: left;
+}
+
+@media print {
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		page-break-after: avoid;
+	}
+
+	h1 {
+		string-set: title content();
+	}
+
+	h1 {
+		page-break-before: always;
+	}
+
+	p {
+		/* Try to have at least the final three lines carry across to the next page*/
+		widows: 3;
+	}
+
+	a {
+		page-break-inside: avoid;
+	}
+
+	a::after {
+		content: " ";
+	}
+
+	ul,
+	ol,
+	li,
+	dl {
+		page-break-before: avoid;
+	}
+
+	blockquote,
+	figure,
+	table {
+		page-break-inside: avoid;
+	}
+
+	footer {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+}
+
+@page {
+	font-family: source-serif-pro, serif;
+	margin: 20mm;
+	size: A4;
+	counter-increment: page;
+
+	@top-right {
+		content: "Page " counter(page) " of " counter(pages);
+		font-size: 10pt;
+		color: #888888;
+		vertical-align: middle;
+	}
+
+	@top-center {
+		content: '';
+	}
+
+	@top-left {
+		content: string(title);
+		font-size: 10pt;
+		color: #888888;
+		vertical-align: middle;
+		width: 100%;
+	}
+
+	@bottom-right {
+		/*		content: 'Paul Dürnberger'; */
+		font-size: 10pt;
+		color: #888888;
+		width: 100%;
+		vertical-align: middle;
+	}
+
+	@bottom-center {
+		background: #ffffff;
+		content: '';
+		display: block;
+		height: 0.1mm;
+		width: 100%;
+		opacity: 0.6;
+	}
+
+	@bottom-left {
+		content: '';
+		font-size: 10pt;
+		color: #888888;
+		text-transform: uppercase;
+		width: 100%;
+		vertical-align: middle;
+	}
+
+}
+
+@page :first {
+	@top-left {
+		background: none;
+		content: ''
+	}
+
+	@top-center {
+		content: none
+	}
+
+	@top-right {
+		content: none
+	}
+}
+
+@page :blank {
+	@top-left {
+		background: none;
+		content: ''
+	}
+
+	@top-center {
+		content: none
+	}
+
+	@top-right {
+		content: none
+	}
+}

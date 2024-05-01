@@ -1,0 +1,57 @@
+# Writing Options
+#
+set multibuffer                 # open additional files
+set tabsize 4
+set tabstospaces
+set trimblanks
+set linenumbers
+set constantshow
+set mouse                       # enable mouse support
+set smarthome                   # `Home` jumps to line start first
+set afterends                   # `Ctrl+Right` move to word ends instead of word starts
+set wordchars "_"               # recognize '_' as part of a word
+set matchbrackets "(<[{)>]}"
+set wordbounds                  # treat punctuation as part of words
+set softwrap                    # continues over multiple lines
+set atblanks                    # when softwrap is set, wrap lines at blanks
+set autoindent                  # indent new line to match line above
+set speller "hunspell -d en_GB" 
+set zap                         # backspace or del to erase marked region
+
+# Syntax Highlights
+#
+include "~/.nano/*.nanorc"      # location of the syntax settings file
+
+# Colour Options
+#
+set titlecolor normal           # the bar at the top of the page
+set numbercolor yellow          # color of line numbers
+set keycolor black,white        # colors in the help panel
+set functioncolor white         # colors in the help panel
+
+# Keybindings
+#
+# Inspired by Windows
+#unbind ^c  main
+#unbind ^x  main
+#unbind ^v  main
+#unbind ^s  all
+#unbind ^q  all
+
+#bind ^c    copy      main
+#bind ^x    cut       main
+#bind ^v    paste     main
+#bind ^s    writeout  all   # save file
+#bind ^q    exit      all
+
+# Inspired by nvim
+unbind ^c   main
+unbind ^y  main
+unbind ^p  main
+unbind ^v  main
+
+bind ^c    cut     main  # cut
+bind ^y    copy    main  # yank
+bind ^p    paste   main  # paste
+bind ^v    mark    main  # set mark
+
