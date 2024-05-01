@@ -27,7 +27,8 @@ require("lazy").setup({
 
 --  {   'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
 --  {   'EdenEast/nightfox.nvim', name = 'nightfox', priority = 1000    },
-    {   'projekt0n/github-nvim-theme', name = 'github', priority = 1000 },
+--  {   'projekt0n/github-nvim-theme', name = 'github', priority = 1000 },
+    {   'sainnhe/edge', name = 'edge', priority = 1000  },
 
     {   'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'    },
     {   'neovim/nvim-lspconfig' },
