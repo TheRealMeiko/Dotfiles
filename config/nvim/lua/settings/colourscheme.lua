@@ -21,5 +21,5 @@ opt.termguicolors = true
 -- edge
 --https://github.com/sainnhe/edge
 -- choose from light or dark
-vim.opt.background = 'light'
+vim.opt.background = 'dark'
 vim.cmd.colorscheme('edge')
