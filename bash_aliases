@@ -14,34 +14,31 @@ alias top='htop'
 # Backup
 alias backup='~/bin/backup-home-directory.sh'
 
-# Fuzzy Finder
+# Fuzzy finder
 alias ff='$EDITOR "$(fzf)"'
 alias fg='~/bin/fuzzygrep.sh'
 alias fh='~/bin/fuzzyhistory.sh'
 
-# Git Push
+# Gitpush
 alias gp='~/bin/gitpush.sh'
 
 # Jekyll server
 alias jserve="bundle exec jekyll serve --livereload"
 
-# Lock Screen
+# Lock screen
 alias lock='~/bin/lock.sh'
 
 # New journal entry
 alias nn='~/bin/write/new-daily-note.sh'
 
 # Print
-alias print='~/bin/print-options.sh'
+alias print='~/bin/wp-print.sh'
 
-# Rip Music
+# Rip music 
 alias rip='~/bin/rip-options.sh'
 
 # Server
 alias server='~/bin/server-mount.sh'
-
-# Spellchecking
-alias spell='~/bin/helix/hx-spellcheck.sh'
 
 # Synaptic
 alias synaptic='sudo synaptic'
@@ -52,6 +49,9 @@ alias update='sudo -- sh -c "apt update && apt -y upgrade && apt -y --purge auto
 # VPN
 alias vpn='~/bin/vpn.sh'
 
-# Writing
+# Write 
+alias write='~/bin/wp-write.sh'
+
+# Writing options
 alias wp='~/bin/wp.sh'
 
