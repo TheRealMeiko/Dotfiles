@@ -5,7 +5,7 @@ html {
 body {
 	font-family:'Lucida Sans', Verdana, sans-serif;
 	font-weight: 400;
-	color: #707070 /* dark gray */;
+	color: #404040 /* dark gray */;
 	max-width: 100%;
 	background-color: #ffffff;
 }
@@ -13,7 +13,7 @@ body {
 h1, h2, h3, h4 {
 	font-family:Georgia, 'Times New Roman', serif;
 	text-transform: uppercase;
-	color: #97a6c4 /* theme color */;
+	color: #000067 /* theme color */;
 }
 
 h1 {
@@ -43,18 +43,14 @@ li {
 .title {
 	font-family: droid-serif, serif;
 	font-size: 3.00rem;
-	color: #97a6c4
-		/* theme color */
-	;
+	color: #000067 /* theme color */;
 	text-transform: uppercase;
 	text-align: center;
 	letter-spacing: 0.5rem;
 }
 
 .subtitle {
-	color: #97a6c4
-		/* theme color */
-	;
+	color: #000067 /* theme color */;
 	text-transform: uppercase;
 	text-align: center;
 	letter-spacing: 0.30rem;
@@ -69,6 +65,7 @@ li {
 }
 
 a {
+    color: #0000cc; /* blue */
 	text-decoration: none;
 }
 
@@ -86,8 +83,8 @@ th, tr, td {
 }
 
 th {
-	background-color: #707070;
-	color: #ffffff;
+	/*background-color: #707070;*/
+	font-weight: 700;
 }
 
 tr:nth-child(even) {
@@ -97,13 +94,11 @@ tr:nth-child(even) {
 img {
 	width: 100%;
 	padding: 0.5rem;
-	border: 1px solid #97a6c4 /* theme color */;
-
 }
 
 figure {
 	display: block;
-	width: 50%;
+	/*width: 50%;*/
 	height: auto;
 	margin-right: auto;
 	margin-left: auto;
@@ -112,8 +107,9 @@ figure {
 figcaption {
 	font-size: 11pt;
 	font-style: italic;
-	text-align: center;
-	padding-top: 0.25rem;
+    text-align: center;
+	text-transform: capitalize;
+    padding-top: 0.25rem;
 	padding-bottom: 0.75rem;
 }
 
@@ -123,12 +119,12 @@ blockquote {
 	margin-bottom: 2.0rem;
 	margin-left: 0;
 	padding-left: 1rem;
-	border-left: solid 0.1rem #97a6c4 /* theme color */;
+	border-left: solid 0.1rem #000067 /* theme color */;
 }
 
 blockquote p {
 	font-style: italic;
-	color: #97a6c4 /* theme color */;
+	color: #000067 /* theme color */;
 	text-align: justify;
 }
 
@@ -165,12 +161,13 @@ footer p {
 
 	a {
 		page-break-inside: avoid;
-		color: #707070;
 	}
 
-	a::after {
+	/* 
+*   a::after {
 		content: " (" attr(href) ")";
 	}
+    */
 
 	ul, ol, li, dl {
 		page-break-before: avoid;
