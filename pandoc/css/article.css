@@ -3,49 +3,34 @@ html {
 }
 
 body {
-	font-family:'Lucida Sans', Verdana, sans-serif;
-	font-weight: 400;
-	color: #404040 /* dark gray */;
 	max-width: 100%;
 	background-color: #ffffff;
 }
 
-h1, h2, h3, h4 {
-	font-family:Georgia, 'Times New Roman', serif;
-	text-transform: uppercase;
-	color: #000067 /* theme color */;
+h1, h2, h3, h4, h5, h6 {
+    font-family:'DejaVu Sans', sans-serif;
+    font-weight:400;
+    text-transform: uppercase;
+    color:#000067; /* very dark blue */ 
+    padding-top: 1.5rem;
 }
+    
+h1 {font-size: 1.75rem;}
+h2 {font-size: 1.50rem;}
+h3 {font-size: 1.20rem;}
+h4 {font-size: 1.10rem;}
 
-h1 {
-	font-size: 1.8rem;
-}
-
-h2 {
-	font-size: 1.5rem
-}
-
-h3 {
-	font-size: 1.2rem;
-}
-
-p,
-a,
-li {
-	font-size: 1rem;
-	line-height: 1.668;
-}
-
-.author {
-	text-transform: uppercase;
-	text-align: center;
+p, a, ul, ol, li, dl, em, th, tr, td  {
+    font-family:'DejaVu Serif', serif;
+    font-size: 1rem;
+    color: #404040; /* very dark gray */
+    line-height: 1.668;
 }
 
 .title {
-	font-family: droid-serif, serif;
-	font-size: 3.00rem;
-	color: #000067 /* theme color */;
-	text-transform: uppercase;
+    font-size: 3.00rem;
 	text-align: center;
+    margin-top: 15rem;
 	letter-spacing: 0.5rem;
 }
 
@@ -56,8 +41,9 @@ li {
 	letter-spacing: 0.30rem;
 }
 
-.cover {
-	padding-top: 45%;
+.author {
+	text-transform: uppercase;
+	text-align: center;
 }
 
 .signature {
@@ -83,34 +69,38 @@ th, tr, td {
 }
 
 th {
-	/*background-color: #707070;*/
+	background-color: #707070;
 	font-weight: 700;
 }
 
 tr:nth-child(even) {
-	background-color: rgba(151, 166, 196, 0.25) /* theme color */;
+	background-color: rgba(151, 166, 196, 0.25);
 }
 
 img {
 	width: 100%;
-	padding: 0.5rem;
 }
 
 figure {
 	display: block;
-	/*width: 50%;*/
 	height: auto;
 	margin-right: auto;
 	margin-left: auto;
 }
 
+figure.w33 {width: 33%;}
+figure.w50 {width: 50%;}
+figure.w66 {width: 67%;}
+figure.w75 {width: 75%;}
+figure.w100 {width: 100%;}
+
 figcaption {
-	font-size: 11pt;
+	font-size: 10pt;
 	font-style: italic;
     text-align: center;
 	text-transform: capitalize;
     padding-top: 0.25rem;
-	padding-bottom: 0.75rem;
+	padding-bottom: 0.25rem;
 }
 
 blockquote {
@@ -123,6 +113,7 @@ blockquote {
 }
 
 blockquote p {
+    font-family:'DejaVu Serif', serif;
 	font-style: italic;
 	color: #000067 /* theme color */;
 	text-align: justify;
@@ -184,14 +175,14 @@ footer p {
 }
 
 @page {
-	margin: 20mm;
+	margin: 18mm 20mm 18mm 20mm;
 	size: A4;
+    font-size: 10pt;
+    color: #b8b8b8;
 	counter-increment: page;
 
 	@top-right {
 		content: "Page " counter(page) " of " counter(pages);
-		font-size: 10pt;
-		color: #b8b8b8;
 		vertical-align: middle;
 	}
 
@@ -201,16 +192,12 @@ footer p {
 
 	@top-left {
 		content: string(title);
-		font-size: 10pt;
-		color: #b8b8b8;
 		vertical-align: middle;
 		width: 100%;
 	}
 
 	@bottom-right {
 		content: 'Paul Dürnberger';
-		font-size: 10pt;
-		color: #b8b8b8;
 		width: 100%;
 		vertical-align: middle;
 	}
@@ -226,8 +213,6 @@ footer p {
 
 	@bottom-left {
 		content: '';
-		font-size: 10pt;
-		color: #b8b8b8;
 		text-transform: uppercase;
 		width: 100%;
 		vertical-align: middle;

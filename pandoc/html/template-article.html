@@ -34,7 +34,7 @@
   </head>
 
   <body>
-
+    
     <div class="container">
 
         $for(include-before)$
@@ -55,7 +55,7 @@
                 $endfor$
 
                 $if(date)$
-                  <p class="date">Printed: $date$</p>
+                  <p class="date">Created: $date$</p>
                 $endif$
             </header>
   
@@ -80,21 +80,9 @@
         
         </div><!-- End of main -->
 
-        <footer>
-            $for(author)$
-            <p><span class="signature">Author: $author$</span>
-            $endfor$
-
-            $if(date)$
-            <br />
-            <span class="date">Printed: $date$</span>
-            $endif$
-
-            </p>       
-        </footer>
+        <footer></footer>
         
-        </div> <!-- End of container -->
+    </div> <!-- End of container -->
 
   </body>
-  
 </html>

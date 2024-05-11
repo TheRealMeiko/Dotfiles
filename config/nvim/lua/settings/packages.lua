@@ -1,8 +1,6 @@
+-- ================================================================================
 -- Package Management
---
--- Settings for
---  1. The package manager and,
---  2. The installed packages
+-- Settings for the package manager and the installed packages
 
 -- ================================================================================
 -- Package Manager (in this case, lazy.nvim)
@@ -36,8 +34,7 @@ require("lazy").setup({
     {   'williamboman/mason-lspconfig.nvim' },
 
     {
-        'hrsh7th/nvim-cmp',
-        -- completion engine
+        'hrsh7th/nvim-cmp', -- completion engine
         event = "InsertEnter",
     },
 
@@ -59,7 +56,7 @@ require("lazy").setup({
     {   'BurntSushi/ripgrep'    },
 
     {
-        -- for telescope-fzf-native, ensure cmake, make & gcc are installed on computer
+        -- for telescope-fzf-native, ensure cmake, make & gcc are installed on PC
         'nvim-telescope/telescope-fzf-native.nvim', build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
     },
 
@@ -71,10 +68,10 @@ require("lazy").setup({
 
             configs.setup({
                 ensure_installed = {
-                    "lua",
                     "bash",
                     "css",
                     "html",
+                    "lua",
                     "markdown",
                     "markdown_inline",
                     "yaml"
@@ -99,9 +96,10 @@ require("lazy").setup({
 
     {
         'folke/zen-mode.nvim',
+        event = 'VeryLazy',
 		opts = {
 			window = {
-				width = 80,
+				width = 100,
 			},
 		},
 	},
