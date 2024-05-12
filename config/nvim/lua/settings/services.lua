@@ -1,3 +1,4 @@
+-- ================================================================
 -- Services
 --
 
@@ -55,3 +56,7 @@ cmp.setup({
         { name = 'path'},
     }),
 })
+
+-- Load snippets from ~/.config/nvim/snippets/
+require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/snippets/"})
+
